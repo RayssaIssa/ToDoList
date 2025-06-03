@@ -10,11 +10,18 @@ function addTarefa(nome){
     if(importante.classList.contains('prioritario'))
         imp = "Sim"
     console.log(`Tarefa: ${nome} | Importante ${imp}`)
-    console.log("clicado em add")
+    //console.log("clicado em add")
 }
 
 buttonAdd.addEventListener('click', () => {
-    addTarefa(nomeTarefa)
+    var nome = nomeTarefa.value
+    if(nome === ""){
+        var msgError = "Campo de tarefa vazio!"
+        erro(msgError)
+        //console.log("Nome tarefa nulo")
+    }else{
+        addTarefa(nome)
+    }
 })
 
 // Colorindo e descolorindo a estrela de prioridade
@@ -28,6 +35,18 @@ importante.addEventListener('click', () =>{
 })
 
 
+// Parte da mensagem de erro
+const alertaErro = document.querySelector('.erro')
+
+function erro(mensagem){
+    alertaErro.style.display = 'block'
+    alertaErro.textContent = mensagem
+    
+    setTimeout(() => {
+        alertaErro.style.display = 'none'
+        alertaErro.textContent = ""
+    }, 4000)
+}
 
 
 })
