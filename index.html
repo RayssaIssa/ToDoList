@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="barraNav">To Do List</header>
+
+        <main>
+            <div class="adicionar">
+                <input id="tarefa" class="tarefa" type="text" placeholder="Insira a tarefa" maxlength="100">
+                
+                <button id="importante" class="importante" title="Definir como importante">
+                    <span class="material-symbols-outlined">star
+                    </span>
+                </button>
+                <button id="adicionar" class="addTarefa" title="Adicionar nova tarefa">
+                    <span class="material-symbols-outlined">add
+                    </span>
+                </button>
+            </div>
+
+            <div class="tarefas">
+                <div class="topo">
+                    <h3 class="titulo">To Do</h3>
+                    <select name="filtro" class="filtro" id="filtro">
+                        <option value="pendente">Pendente</option>
+                        <option value="concluido">Concluido</option>
+                        <option value="importante">Importante</option>
+                    </select>
+                </div>
+
+                <div class="tarefaPendente">
+                    <span class="descricao">- Tarefa que foi inserida</span>
+                    <button class="importante">
+                        <span class="material-symbols-outlined">star
+                        </span>
+                    </button>
+                    <button class="concluido" title="Marcar como concluído">
+                        <span class="material-symbols-outlined">check
+                        </span>
+                    </button>
+                    <button class="excluir" title="Excluir tarefa">
+                        <span class="material-symbols-outlined">delete
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

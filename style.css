@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaushan+Script&family=Share+Tech&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    background-color: #313131;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.barraNav{
+    top: 0;
+    left: 0;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(238, 238, 238);
+    border-bottom: solid 1px #000000;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+
+main{
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 10%;
+    padding: 5%;
+    border: solid 1px #333;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 650px;
+}
+
+.adicionar{
+    border-bottom: solid 2px #333;
+    margin-bottom: 5%;
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.adicionar input{
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 20px;
+    border: solid 1px #000000;
+    border-radius: 10px;
+    padding: 2%;
+    width: auto;
+    max-width: 300px;
+}
+
+.adicionar button span,
+.tarefaPendente button span{
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 100;
+    padding: 5%;
+    margin: 5% 10%;
+    border-radius: 10px;
+    border: solid 1px #333;
+}
+
+.adicionar button span:hover,
+.tarefaPendente button span:hover{
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.tarefas{
+    display: flex;
+    flex-direction: column;
+}
+
+.tarefas .topo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1% 10%;
+    font-size: 18px;
+}
+
+.topo select{
+    padding: 2%;
+    border-radius: 8px;
+    border: solid 1px #333;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+}
+
+.tarefaPendente{
+    border-top: solid 2px #333;
+    margin-top: 5%;
+    padding: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tarefaPendente .descricao{
+    font-size: 18px;
+    padding: 2%;
+}
+
+.tarefaPendente .excluir span{
+    background-color: rgba(255, 0, 0, 0.767);
+}
+
+.tarefaPendente .concluido span{
+    background-color: transparent;
+    /*rgba(40, 192, 2, 0.767)*/
+}
+
+.importante span{
+    background-color: transparent; 
+}
+.importante.prioritario span{
+    background-color: yellow;
+}
+
+@media screen and (max-width: 800px) {
+    main{
+        padding: 7%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main{
+        padding: 4%;
+        margin: 5% 2%;
+        width: 98%;
+    }
+    .adicionar button span,
+    .tarefaPendente button span{
+        margin: 5%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .adicionar input{
+        width: 200px;
+    }
+    .adicionar button span,
+    .tarefaPendente button span{
+        margin: 2%;
+    }
+    .tarefaPendente{
+        padding: 3% 0;
+    }
+    .tarefaPendente .descricao{
+        padding: 2% 0;
+    }
+}
